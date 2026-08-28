@@ -1,0 +1,4 @@
+Vargen;Agust Strindberg;1950;True
+Sommar;Astrid Lindgren;1870;False
+Lolas sommar;Emma Steen;2012;False
+Katten och kakan;Siffy Lestradamus;1891;True
