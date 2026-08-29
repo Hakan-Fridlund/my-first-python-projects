@@ -1,0 +1,19 @@
+Vecka 1
+--------------------
+Måndag   Pizza-bullar
+Tisdag   placeholder 1
+Onsdag   Köttbulle-baguette
+Torsdag  Nudlar
+Fredag   placeholder 2
+Lördag   Taco-pirog
+Söndag   Frukt
+
+Vecka 2
+--------------------
+Måndag   Taco-pirog
+Tisdag   Pizza-bullar
+Onsdag   placeholder 2
+Torsdag  Nudlar
+Fredag   placeholder 1
+Lördag   Köttbulle-baguette
+Söndag   Frukt
