@@ -1,0 +1,3 @@
+    • Det här är en enkel textfil.
+Den innehåller några ord.
+Du ska läsa filen i Python och räkna hur många ord den har.
