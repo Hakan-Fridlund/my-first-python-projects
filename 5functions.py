@@ -45,13 +45,14 @@ def text_statistics(text):
     for word in text.split():
         if len(word) > len(longest_word):
             longest_word = word
+        # noinspection PyTypeChecker
         if shortest_word is None or len(word) < len(shortest_word):
             shortest_word = word
     for char in text:
         if char != " ":
             characters += 1
 
-    return (words_number, longest_word, shortest_word, characters)
+    return words_number, longest_word, shortest_word, characters
 
 
 # filtrera tal Tar en lista och returnerar alla tal som är större än ett visst gränsvärde.
