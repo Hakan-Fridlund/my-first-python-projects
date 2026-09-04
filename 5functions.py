@@ -1,4 +1,4 @@
-# Tar två tal och en operator (+, -, *, /) och returnerar resultatet.
+# input two numbers and an operator +,-,*,/ and returns the result
 def calculator(num1, num2, operator):
     num1, num2 = int(num1), int(num2)
     if operator == "+":
@@ -9,14 +9,14 @@ def calculator(num1, num2, operator):
         return num1 * num2
     elif operator == "/":
         if num2 == 0:
-            return "Fel, du kan inte dividera med 0"
+            return "Error, not divisible by 0"
         else:
             return num1 / num2
     else:
-        return "Fel räknesätt"
+        return "Wrong operator"
 
 
-# räkna vokaler i en sträng, Perfekt för loopar och stränghantering, Returnerar hur många vokaler som finns i texten.
+# returns vowels count from a string
 def count_vowels(text):
     count = 0
     for char in text:
@@ -25,7 +25,7 @@ def count_vowels(text):
     return count
 
 
-# temperaturkonvertering Konverterar mellan Celsius ↔ Fahrenheit.
+# converts temperature between celsius and fahrenheit
 def convert_temperature(value, unit):
     value = float(value)
     if unit.lower() == "c":
@@ -33,10 +33,10 @@ def convert_temperature(value, unit):
     elif unit.lower() == "f":
         return f"{((value -32) / 1.8 )} Celsius"
     else:
-        return "Okänd skala"
+        return "Unknown scale"
 
 
-# statistik om en text, Returnerar antal ord, längsta ordet, kortaste ordet + antal tecken
+# statistics about a text. Returns number of words, longest, shortest and number of signs
 def text_statistics(text):
     words_number = len(text.split())
     longest_word = ""
@@ -55,8 +55,8 @@ def text_statistics(text):
     return words_number, longest_word, shortest_word, characters
 
 
-# filtrera tal Tar en lista och returnerar alla tal som är större än ett visst gränsvärde.
-# märklig sak att sorted i return sorterar 1000 före 101
+
+#filters numbers in a list, returns numbers greater than 100 in a sorted list
 def greater_than_100(numbers):
     lista = []
     for number in numbers:
@@ -68,36 +68,37 @@ def greater_than_100(numbers):
 
 def meny():
     while True:
-        print("1. Miniräknare")
-        print("2. Vokalräknare")
-        print("3. Temperaturkonverterare")
-        print("4. Text-statistik")
-        print("5. Är mitt tal över 100")
-        print("6. Avsluta")
-        val = input("Välj: ")
+        print("1. Calculator")
+        print("2. Vowelcounter")
+        print("3. Temperatureconverter")
+        print("4. Text-statistics")
+        print("5. Is my number greater than 100?")
+        print("6. Exit")
+        val = input("Choose: ")
         if val == "1":
-            num1 = input("Skriv ett tal: ")
-            operator = input("Skriv ett räknesätt +-*/: ")
-            num2 = input("Skriv ett tal: ")
-            print(f"\nSvaret är: {calculator(num1, num2, operator)}\n")
+            num1 = input("Write a number: ")
+            operator = input("Write an operator: +-*/: ")
+            num2 = input("Write a number: ")
+            print(f"\nThe answer is: {calculator(num1, num2, operator)}\n")
         elif val == "2":
-            text = input("Skriv en hel text: ")
-            print(f"Det är {count_vowels(text)} vokaler i texten\n")
+            text = input("Write a text: ")
+            print(f"Is is {count_vowels(text)} vowels in the text\n")
         elif val == "3":
-            value = input("Hur många grader är det?: ")
-            unit = input("Vilken skala är det? (C eller F):")
-            print(f"\nDet motsvarar: {convert_temperature(value, unit)}\n")
-        # unpacking listan som kommit i retur för att separera dom fyra olika svaren
+            value = input("How many degrees is it?: ")
+            unit = input("Which scale do you use? (C or F):")
+            print(f"\nThat corresponds to: {convert_temperature(value, unit)}\n")
+
         elif val == "4":
-            text = input("Skriv en hel text: ")
+            text = input("Write a text: ")
             stats = text_statistics(text)
             words, longest, shortest, chars = stats
             print(
-                f"\nAntal ord: {words}\nLängsta ordet är: {longest}\nKortaste ordet är: {shortest}\nAntal bokstäver: {chars}\n"
+                f"\nNumber of words is: {words}\nThe longest word is: {longest}\nThe shortest word is: {shortest}\n"
+                f"Number of letters in the text: {chars}\n"
             )
         elif val == "5":
-            numbers = input("Skriv flera tal, separerade med mellanslag: ").split()
-            print(f"\nDessa tal är över 100: {greater_than_100(numbers)}\n")
+            numbers = input("Write several numbers, separated with a space: ").split()
+            print(f"\nThese numbers are greater than 100: {greater_than_100(numbers)}\n")
         elif val == "6":
             break
         else:
