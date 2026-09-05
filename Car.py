@@ -1,6 +1,5 @@
 cars = []
 
-
 class Car:
     def __init__(
         self,
@@ -118,7 +117,7 @@ def get_year(prompt: str) -> int:
             print("\nError: You must type in a number, try again: ")
 
 
-# skydda menyn från felaktig input tex negativa eller tomma värden
+# ToDo protect the menu from invalid inputs
 def menu(car):
     while True:
         print("\n1. Change car")
@@ -167,5 +166,5 @@ def main():
     menu(car)
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
