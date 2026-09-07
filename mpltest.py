@@ -4,10 +4,9 @@ import pandas as pd
 
 """
 https://www.kaggle.com/datasets
-    • Övning: visualisera data (linjediagram, histogram).
-Det betyder att du ska:    1. Läsa in ett dataset (CSV)    2. Skapa ett linjediagram    3. Skapa ett histogram
-    4. Förstå vad graferna visar
-    production_share_pct, mine_production_tonnes, price_usd_per_tonne 
+    • assignment: visualize data (lineplot, histogram).
+   1. Read a dataset (CSV)    2. Create a line plot   3. create a histogram
+    4. Understand the plots
 """
 
 
@@ -16,7 +15,7 @@ lands = ["China", "Australia", "Brazil", "Canada", "France", "Peru", 'Tajikistan
 plt.figure(figsize=(12,6))
 
 df["year"] = df["year"].astype(int)
-"""
+
 for land in lands:
     group = (
         df[df["country"] == land]
@@ -28,7 +27,7 @@ for land in lands:
 plt.xlabel("Year")
 plt.ylabel("mine_production_tonnes")
 plt.title("Average mine production ")
-"""
+
 
 plt.figure(figsize=(12,6))
 
