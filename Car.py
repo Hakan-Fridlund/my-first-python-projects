@@ -1,6 +1,6 @@
 cars = []
 
-
+# ToDo add function descriptions and protect code from invalid input
 class Car:
     def __init__(
         self,
@@ -118,7 +118,6 @@ def get_year(prompt: str) -> int:
             print("\nError: You must type in a number, try again: ")
 
 
-# skydda menyn från felaktig input tex negativa eller tomma värden
 def menu(car):
     while True:
         print("\n1. Change car")

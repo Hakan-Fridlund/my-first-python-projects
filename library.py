@@ -28,7 +28,6 @@ class Book:
     def borrow(self,):
         """
          Marks the book as borrowed.
-
          Returns:
             str: A message indicating whether the book was successfully borrowed
             or if it was already borrowed.
@@ -41,7 +40,6 @@ class Book:
     def return_book(self,):
         """
         Marks a book as not borrowed.
-
         Returns:
              Str: A message indicating whether the book was successfully
              or if it was not borrowed.
@@ -127,11 +125,10 @@ class Library:
 
 
 
-def menu(library, current_year):
+def menu(library):
     """
     Runs the menu and takes input to send to functions
     :param library: Library object that stores all books and provides operations.
-    :param CURRENT_YEAR: int to validate publication year when adding books.
     :return: None
     """
     while True:
@@ -170,7 +167,7 @@ def menu(library, current_year):
                     if not year.isdigit():
                         print("Year need to be a number")
                         continue
-                    if int(year) > current_year:
+                    if int(year) > CURRENT_YEAR:
                         print("Year cannot be in the future")
                         continue
                     break
@@ -242,10 +239,10 @@ def main():
     library = Library("library_save.txt")
     library.load_from_file()
     print(library)
-    menu(library, CURRENT_YEAR)
+    menu(library)
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     main()
 
 
