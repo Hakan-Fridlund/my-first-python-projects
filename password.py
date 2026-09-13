@@ -1,25 +1,15 @@
 """
-Du ska skriva ett program där användaren får försöka skriva in ett lösenord. Programmet ska:
-Ha ett korrekt lösenord lagrat i koden t.ex. password = "hemligt"
-Låta användaren försöka skriva in lösenordet flera gånger
-Vanligt är 3 försök, men ibland ska du själv välja.
-Hantera fel
-Det betyder:
-Om användaren skriver något som inte är en sträng (t.ex. trycker Enter direkt) → hantera det.
-Om användaren skriver fel lösenord → ge ett tydligt felmeddelande.
-Om användaren skriver rätt → avsluta direkt.
-Ge ett meddelande när försöken är slut
-t.ex. “Du har slut på försök.”
-(I vissa versioner) använda try/except
-För att fånga fel som:
-tom input
-avbruten input
+Assignment: Write a program where the user gets to write a password. the program should:
+1 Have at correct password stored in the code.
+2 Let the user try it multiple times, commonly 3 tries
+3 Handle errors, which means:
+if the user writes something that is not a sting, fex presses enter directly -> handle it
+if the user writes the wrong password -> give a clear error message
+if the user writes the correct password -> close directly
+Give a message when out of tries
+use try/except to catch errors like: empty input, disrupted input et.c.
 """
-
-
-def main():
-    log_in("Skriv in ditt lösenord: ")
-
+password = "Gecko"
 
 def log_in(prompt):
     attempts = 0
@@ -27,17 +17,19 @@ def log_in(prompt):
         try:
             attempt = input(prompt)
             if attempt == password:
-                print("Du är inloggad")
+                print("You are logged in")
                 break
         except ValueError:
-            print("felaktig input")
+            print("faulty input")
         else:
             attempts += 1
             if attempts >= 3:
-                print("Ditt konto är låst pga för många inloggnings-försök!")
+                print("Your account is locked, too many login attempts!")
                 break
-            print(f"Fel lösenord, du har {3-attempts} försök kvar")
+            print(f"Wrong password, you have {3-attempts} attempts left")
+
+def main():
+    log_in("Write your password: ")
 
 
-password = "Gecko"
 main()
