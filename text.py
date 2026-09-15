@@ -1,4 +1,6 @@
-#Övning: läs textfil → räkna ord.
+"""
+assignment read textfile -> count the words
+"""
 
 def count(file):
     count = 0
@@ -8,7 +10,7 @@ def count(file):
         for word in text.split():
             count += 1
 
-        print(f"Denna texten innehåller: {count} ord")
+        print(f"This text contain: {count} words")
 
 
 def main():
